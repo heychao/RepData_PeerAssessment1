@@ -1,8 +1,10 @@
 ---
 title: "Reproducible Research Assignment 1"
 author: "EC"
-date: "December 19, 2015"
-output: html_document
+date: "January 5, 2016"
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 This is Peer Assessment #1 for Reproducible Research. The packages used for this analysis are:
@@ -58,8 +60,8 @@ dly_step_median <- median(dly_step_total$Total_Steps)
 ```
 
 ## Mean and Median Total Daily Steps  
-- Mean daily steps is: `r dly_step_avg`
-- Median daily steps is: `r dly_step_median`
+- Mean daily steps is: **`r dly_step_avg`**
+- Median daily steps is: **`r dly_step_median`**
 
 To gather a daily activity pattern, we group by intervals, take the mean by of steps by interval:
 
@@ -86,7 +88,7 @@ sorted_int_step_avg
 ```
 
 ## Highest daily step average interval
-The output above shows that there is only one intervale that features a maximum daily step average, `r sorted_int_step_avg[1,1]`, which is `r sorted_int_step_avg[1,2]`.
+The output above shows that there is only one interval (`r sorted_int_step_avg[1,1]`) that features a maximum daily step average, which is **`r sorted_int_step_avg[1,2]`**.
 
 ## The number of NA's in the original data set
 can be evaluated with the following expression:
@@ -95,7 +97,7 @@ can be evaluated with the following expression:
 na_num <- sum(!complete.cases(datatdf))
 ```
 
-There are `r na_num` rows with NA values in the original data set.
+There are **`r na_num`** rows with NA values in the original data set.
 
 ## Strategy for Imputing Data
 
@@ -153,10 +155,10 @@ imp_dly_step_median <- median(imp_dly_step_total$Total_Steps)
 ```
 
 ## Imputed Mean and Median Total Daily Steps  
-- Mean daily steps is: `r imp_dly_step_avg`
-- Median daily steps is: `r imp_dly_step_median`
+- Mean daily steps is: **`r imp_dly_step_avg`**
+- Median daily steps is: **`r imp_dly_step_median`**
 
-*There is a slight but insignificant change with the addition of the imputed data*
+**There is a slight but insignificant change with the addition of the imputed data**
 
 Categorizing the data *with imputed data added* using lubridate, and then creating a new table with interval step averages grouped differentiated by weekend and weekday:
 

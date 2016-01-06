@@ -1,6 +1,6 @@
 # Reproducible Research Assignment 1
 EC  
-December 19, 2015  
+January 5, 2016  
 
 This is Peer Assessment #1 for Reproducible Research. The packages used for this analysis are:
 
@@ -63,8 +63,8 @@ dly_step_median <- median(dly_step_total$Total_Steps)
 ```
 
 ## Mean and Median Total Daily Steps  
-- Mean daily steps is: 1.0766189\times 10^{4}
-- Median daily steps is: 10765
+- Mean daily steps is: **1.0766189\times 10^{4}**
+- Median daily steps is: **10765**
 
 To gather a daily activity pattern, we group by intervals, take the mean by of steps by interval:
 
@@ -114,7 +114,7 @@ sorted_int_step_avg
 ```
 
 ## Highest daily step average interval
-The output above shows that there is only one intervale that features a maximum daily step average, 835, which is 206.1698113.
+The output above shows that there is only one interval (835) that features a maximum daily step average, which is **206.1698113**.
 
 ## The number of NA's in the original data set
 can be evaluated with the following expression:
@@ -124,7 +124,7 @@ can be evaluated with the following expression:
 na_num <- sum(!complete.cases(datatdf))
 ```
 
-There are 2304 rows with NA values in the original data set.
+There are **2304** rows with NA values in the original data set.
 
 ## Strategy for Imputing Data
 
@@ -194,10 +194,10 @@ imp_dly_step_median <- median(imp_dly_step_total$Total_Steps)
 ```
 
 ## Imputed Mean and Median Total Daily Steps  
-- Mean daily steps is: 1.0766189\times 10^{4}
-- Median daily steps is: 1.0766189\times 10^{4}
+- Mean daily steps is: **1.0766189\times 10^{4}**
+- Median daily steps is: **1.0766189\times 10^{4}**
 
-*There is a slight but insignificant change with the addition of the imputed data*
+**There is a slight but insignificant change with the addition of the imputed data**
 
 Categorizing the data *with imputed data added* using lubridate, and then creating a new table with interval step averages grouped differentiated by weekend and weekday:
 
